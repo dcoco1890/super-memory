@@ -24,11 +24,6 @@ body {
 h1 {
   font-size: 60px;
 }
-@media (max-width: 800px) {
-  h1 {
-    font-size: 50px;
-  }
-}
 
 h2 {
   font-size: 36px;
@@ -195,19 +190,11 @@ h3 {
   }
   .hero-img > #hero-img {
     transform: translate(0, 100px);
-    /* width: 33%; */
   }
-  .hero-text p {
-    /* width: 417px;
-    height: 195px; */
+  .hero-text {
+    width: 90%;
   }
 
-  /* .hero-text {
-    flex: 1 1 50%;
-  }
-  .hero-img {
-    flex: 2 2 50%;
-  } */
   main.color-boxes {
     transform: unset;
     transform: translate(0, 50px);
@@ -224,6 +211,35 @@ h3 {
     background-position: 166px 109%;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .hero-img > #hero-img {
+    max-width: 100%;
+    height: auto;
+    transform: translate(0, 100px);
+  }
+  .hero-text h2 {
+    font-size: 22px;
+  }
+  .hero-cont {
+    padding-right: 0;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+  h1#hero-text-header {
+    font-size: 46px;
+  }
+}
+
+/* Added this to keep the save 10% from wrapping */
+@media only screen and (max-width: 500px) {
+  h1#hero-text-header {
+    font-size: 44px;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .hero-cont {
     padding: 10px;
