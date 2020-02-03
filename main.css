@@ -12,7 +12,7 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: rgb(251, 251, 251);
+  background-color: #eee;
 }
 
 .container {
@@ -138,7 +138,7 @@ main.color-boxes {
 }
 
 .box {
-  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.8);
+  /* box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.8); */
   height: 228px;
   width: 434px;
   border-radius: 4px;
@@ -146,7 +146,7 @@ main.color-boxes {
   justify-content: center;
   align-items: center;
   color: #eee;
-  border: 10px solid #eee;
+  border: 10px solid #fff;
   padding: 10px;
 }
 
@@ -158,6 +158,10 @@ main.color-boxes {
 }
 #box-2 {
   background-color: #d822ee;
+}
+#box-3 {
+  background-color: #057bad;
+  display: none;
 }
 
 /**************Footer with links**********************/
@@ -212,10 +216,6 @@ h3 {
   div.container {
     min-height: calc(100vh - 200px);
   }
-
-  /* section.hero-bg {
-    background-position: 166px 109%;
-  } */
 }
 
 @media only screen and (max-width: 900px) {
@@ -260,11 +260,34 @@ h3 {
   section.hero-bg {
     background-position: bottom right;
   }
+  .hero-img > #hero-img {
+    transform: unset;
+  }
 }
 @media only screen and (max-width: 360px) {
+  /* stops logo from resizing */
   #logo-placeholder {
     flex-shrink: 0;
     width: 54px;
     margin-right: 9px;
+  }
+
+  /* Remove border on boxes and reset height */
+  main.color-boxes > .box {
+    border: none;
+    height: 51px;
+  }
+  main.color-boxes {
+    transform: translate(0, 57px);
+  }
+  h2.color-box-text {
+    display: none;
+  }
+  #box-3 {
+    display: unset;
+  }
+  footer.footer {
+    height: 275px;
+    flex-direction: column;
   }
 }
